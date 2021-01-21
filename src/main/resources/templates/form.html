@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8">
 <title>submit</title>
 </head>
 <body >
-<form method="get" action="testform">
-
-<input type="text" name="text1">
-
-<input type="submit" value="送信ボタン">
+<form action="#" th:action="@{/result}" th:object="${form}" method="post">
+    <p>分野: <input type="text" th:field="*{field}" /></p>
+    <p>問題番号: <input type="text" th:field="*{questionNo}" /></p>
+    <p>点数: <input type="text" th:field="*{score}" /></p>
+    <p>備考: <textarea type="text" th:field="*{note}" /></textarea></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>
 </body>
 </html>
