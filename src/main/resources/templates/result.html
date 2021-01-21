@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>登録結果</h1>
+	<p th:text="'分野: ' + ${form.field}" />
+	<p th:text="'問題番号: ' + ${form.questionNo}" />
+	<p th:text="'点数: ' + ${form.score}" />
+	<p th:text="'備考: ' + ${form.note}" />
+</body>
+</html>
